@@ -1,0 +1,7 @@
+.DS_Store
+example
+lib
+node_modules
+demo.gif
+npm-debug.log
+package-lock.json
