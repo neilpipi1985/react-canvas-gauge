@@ -1,5 +1,13 @@
 # react-canvas-gauge
 
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/react-canvas-gauge.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-canvas-gauge
+[download-image]: https://img.shields.io/npm/dm/react-canvas-gauge.svg?style=flat-square
+[download-url]: https://npmjs.org/package/react-canvas-gauge
+
 ![image](https://github.com/neilpipi1985/react-canvas-gauge/blob/master/demo.gif)
 
 ## Quick start
@@ -40,73 +48,61 @@ export default MyGauge;
       <td>style</td>
       <td>object</td>
       <td>{}</td>
-      <td></td>
     </tr>
     <tr>
       <td>theme</td>
       <td>string: 'light' , 'dark'</td>
       <td>'light'</td>
-      <td></td>
     </tr>
     <tr>
       <td>mode</td>
       <td>string: 'gauge', 'progress'</td>
       <td>'gauge'</td>
-      <td></td>
     </tr>
     <tr>
       <td>size</td>
       <td>number</td>
       <td>128</td>
-      <td></td>
     </tr>
     <tr>
       <td>enableAnimation</td>
       <td>bool</td>
       <td>true</td>
-      <td></td>
     </tr>
     <tr>
       <td>animationTimeout</td>
       <td>number</td>
       <td>250</td>
-      <td></td>
     </tr>
     <tr>
       <td>enableColorful</td>
       <td>bool</td>
       <td>true</td>
-      <td></td>
     </tr>
     <tr>
       <td>title</td>
       <td>string</td>
       <td>''</td>
-      <td></td>
     </tr>
     <tr>
       <td>unit</td>
       <td>string</td>
       <td>''</td>
-      <td></td>
     </tr>
     <tr>
       <td>scaleList</td>
       <td>array</td>
       <td>[{scale:10,quantity:5,startColor:'#ff2a04',endColor:'orange'},{scale:10,quantity:5,startColor:'orange',endColor:'#32cd32'}]</td>
-      <td></td>
     </tr>
     <tr>
       <td>minValue</td>
       <td>number</td>
       <td>0</td>
-      <td></td>
     </tr>
     <tr>
       <td>value</td>
       <td>number</td>
       <td>0</td>
-      <td></td>
     </tr>
   </tbody>
   </table>
