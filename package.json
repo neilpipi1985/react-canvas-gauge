@@ -1,6 +1,6 @@
 {
   "name": "react-canvas-gauge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Gauge Component",
   "main": "lib/gauge.js",
   "scripts": {
