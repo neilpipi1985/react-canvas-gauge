@@ -9,6 +9,10 @@
     "test": "cross-env NODE_ENV=development ./node_modules/.bin/babel-node ./example/test.js",
     "prepublish": "npm run clean && npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilpipi1985/react-canvas-gauge"
+  },
   "keywords": [
     "react",
     "react-component",
@@ -20,7 +24,8 @@
   "author": "neilpipi1985 <neilpipi1985@gmail.com> (https://github.com/neilpipi1985)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/neilpipi1985/react-canvas-gauge/issues"
+    "url": "https://github.com/neilpipi1985/react-canvas-gauge/issues",
+    "email": "neilpipi1985@gmail.com"
   },
   "homepage": "https://github.com/neilpipi1985/react-canvas-gauge",
   "devDependencies": {
