@@ -62,6 +62,7 @@ class Gauge extends PureComponent {
         const optr = (subValue > 0) ? 0.01 : -0.01;
         const timeout = (this.props.animationTimeout / time);
 
+        this.clearLastAnimator();
         this.animator(this.state.valueBefore, optr, valueRate, timeout, newState);
       } else {
         this.drawProgress(this.getValueRate(), newState);
@@ -497,6 +498,13 @@ class Gauge extends PureComponent {
     }
   }
 
+  clearLastAnimator = () => {
+    if (this.animatorTimeout) {
+      clearTimeout(this.animatorTimeout);
+      this.animatorTimeout = undefined;
+    }
+  }
+
   animator = (lastValue, optr, finalValue, timeout, newState) => {
     let value = lastValue + optr;
 
@@ -506,7 +514,7 @@ class Gauge extends PureComponent {
 
     this.drawProgress(value, newState);
     if (value !== finalValue) {
-      setTimeout(() => { this.animator(value, optr, finalValue, timeout, newState); }, timeout);
+      this.animatorTimeout = setTimeout(() => { this.animator(value, optr, finalValue, timeout, newState); }, timeout);
     }
   }
 

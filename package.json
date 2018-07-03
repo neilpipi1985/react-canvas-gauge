@@ -1,6 +1,6 @@
 {
   "name": "react-canvas-gauge",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Gauge Component",
   "main": "lib/gauge.js",
   "scripts": {
@@ -51,6 +51,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.3",
     "koa-webpack-middleware": "^1.0.7",
+    "prop-types": "^15.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",

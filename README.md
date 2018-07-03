@@ -8,7 +8,7 @@
 [download-image]: https://img.shields.io/npm/dm/react-canvas-gauge.svg?style=flat-square
 [download-url]: https://npmjs.org/package/react-canvas-gauge
 
-![image](https://github.com/neilpipi1985/react-canvas-gauge/blob/master/demo.gif)
+![image](https://raw.githubusercontent.com/neilpipi1985/react-canvas-gauge/master/demo.gif)
 
 ## Quick start
 
