@@ -3,7 +3,7 @@ import {
   FormControl, Select, MenuItem, InputLabel, Button
 } from '@material-ui/core';
 
-import Gauge from '../../src/gauge';
+import Gauge from '../../lib/gauge';
 
 require('../public/styles/normalize.css');
 require('../public/styles/App.css');

@@ -4,6 +4,7 @@ import Koa from 'koa';
 import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
 import Static from 'koa-static';
+import convert from 'koa-convert';
 
 const WEB_RES_PATH = path.resolve(__dirname, './public');
 
@@ -51,8 +52,10 @@ class Demo {
       ctx.body = Demo.render(opts.renderRoot, {}, 'Demo');
     });
 
-    Demo.webApp.use(Static(WEB_RES_PATH));
-    Demo.webApp.use(bodyParser());
+    console.log('test');
+
+    Demo.webApp.use(convert(Static(WEB_RES_PATH)));
+    Demo.webApp.use(convert(bodyParser()));
     Demo.webApp.use(router.routes());
 
     const port = opts.port || 3000;

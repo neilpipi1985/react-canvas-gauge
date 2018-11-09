@@ -85,9 +85,9 @@ async function run() {
     }));
     Demo.webApp.use(hotMiddleware(compile));
 
-    await Demo.initialize({ port: 80, renderRoot });
+    await Demo.initialize({ renderRoot });
   } catch (err) {
-    console.log(err.message);
+    console.log(err);
   }
 }
 
