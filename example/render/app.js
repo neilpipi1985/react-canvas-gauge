@@ -114,6 +114,7 @@ class App extends Component {
           scaleList={scaleList}
           minValue={minValue}
           value={value}
+          isTickTextEnable={false}
         />
         <div style={{ width: '95%', margin: '5px auto' }}>
           <FormControl fullWidth>

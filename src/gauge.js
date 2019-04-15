@@ -19,7 +19,8 @@ class Gauge extends PureComponent {
       endColor: PropTypes.string
     })),
     minValue: PropTypes.number,
-    value: PropTypes.number
+    value: PropTypes.number,
+    isTickTextEnable: PropTypes.bool
   };
 
   static defaultProps = {
@@ -37,7 +38,8 @@ class Gauge extends PureComponent {
       { scale: 10, quantity: 5, startColor: 'orange', endColor: '#32cd32' }
     ],
     minValue: 0,
-    value: 0
+    value: 0,
+    isTickTextEnable: true
   };
 
   constructor(props) {
@@ -218,7 +220,8 @@ class Gauge extends PureComponent {
       unit,
       scaleList,
       minValue,
-      value
+      value,
+      isTickTextEnable
     } = this.props;
 
     const sizeInfo = newState.sizeInfo || this.state.sizeInfo;
@@ -379,22 +382,23 @@ class Gauge extends PureComponent {
               );
               gaugeCTX.stroke();
               gaugeCTX.closePath();
-
-              const graduationText = `${(graduationValue + (j * scale))}`;
-              gaugeCTX.font = `${graduationFontSize}px Arial`;
-              gaugeCTX.textAlign = 'center';
-              gaugeCTX.fillStyle = colorInfo.graduation;
-              gaugeCTX.fillText(
-                graduationText,
-                gaugeHalfWidth + (
-                  (graduationPosition - ((graduationLength / 2) + graduationFontSize)) *
-                  Math.cos(angle)
-                ),
-                gaugeHalfHeight + (
-                  (graduationPosition - ((graduationLength / 2) + graduationFontSize)) *
-                  Math.sin(angle)
-                )
-              );
+              if (!!isTickTextEnable) {
+                const graduationText = `${(graduationValue + (j * scale))}`;
+                gaugeCTX.font = `${graduationFontSize}px Arial`;
+                gaugeCTX.textAlign = 'center';
+                gaugeCTX.fillStyle = colorInfo.graduation;
+                gaugeCTX.fillText(
+                  graduationText,
+                  gaugeHalfWidth + (
+                    (graduationPosition - ((graduationLength / 2) + graduationFontSize)) *
+                    Math.cos(angle)
+                  ),
+                  gaugeHalfHeight + (
+                    (graduationPosition - ((graduationLength / 2) + graduationFontSize)) *
+                    Math.sin(angle)
+                  )
+                );
+              }
             }
             graduationValue += (scale * quantity);
           }
